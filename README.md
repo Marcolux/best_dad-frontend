@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# daddy-2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Best Dad 2.0
 
-In the project directory, you can run:
+This App is created for those akward moments where a dad needs to do/say something to break the ice or just embarass the kids in front of their friends.
 
-### `npm start`
+It provides random dad jokes, famouse quotes or fun facts that a user can save in databases if considers them intersting or fun enough. (In the way that can be reused in future momemts)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The user home page will also provides a daily horoscope, automatically created at the login based on the user sign, with the option of picking a different sign (in case mom wants to know her horoscope).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+User stories:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-In the home page, the user can click on login  or signup links, once these links are clicked the user will be redirect to the login or signup forms.
 
-### `npm run eject`
+-In the signup form the user will be asked to type name, zodiac sign, email and password, once the user click the signup button, a user row will be created in the user table in the backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-In the login form, the user can type user name and password that will redirect the user to the user personal page, once the login button will be clicked.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-In the user page the user will see the daily horoscope and some random dad jokes, fun facts and quotes created using an api call to 3 differents api's.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-The user will be able to click a button to randomly "fetch" new jokes, facts or quotes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-The user will be able to click another button to save the quotes, jokes, and facts in different backend tables.
 
-## Learn More
+-The user can navigate from the navigation bar to all the jokes, all the quotes, all the fun facts saved, by clicking on the different links.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-The user can also look for a different daily horoscope, by typing the sign in a specific input field.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Wireframe](./Website.png)
+![Wireframe](./schema.png)
+![Wireframe](./components.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+|Routes                     | HTTP Verb                       | URL                            |
+| :----------------------: | ------------------------------- | ------------------------------- |
+| userRoute | .post | 'user/' |
+| userRoute | .post | 'user/login' |
+| userRoute | .get | 'user/verify' |
+| userRoute | .put | 'user/' |
+| favJokeRoute | .get | '/jokes/:userId' |
+| favJokeRoute | .post | '/jokes/:userId' |
+| favJokeRoute | .delete | '/jokes/:userId/:jokeId' |
+| favQuotesRoute | .get | '/quotes/:userId' |
+| favQuotesRoute | .post | '/quotes/:userId' |
+| favQuotesRoute | .delete | '/quotes/:userId/:quoteId' |
+| favFactsRoute | .get | '/facts/:userId' |
+| favFactsRoute  | .post | 'facts/:userId' |
+| favFactsRoute  | .delete | 'facts/:userId/:factId' |
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+MVP:
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-The site has user authentication functionality.
 
-### Advanced Configuration
+-Each user can login and serch for new jokes facts and quotes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-Each user can save and look  favorite jokes facts and quotes.
 
-### Deployment
+-Each user can update the user name, zodiac sign.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-Each user can see only their own favorite jokes facts and quotes.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Stretch goals:
+
+
+
+-user will be able to load picture from the computer
+
+-make the app mobile "friendly"
+
+-use encryptions for the password and email.
+
