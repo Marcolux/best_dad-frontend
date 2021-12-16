@@ -1,13 +1,160 @@
 body{
+  display: flex;
+
   background: rgb(167, 207, 242);
+  justify-content: center;
+  padding: 0vmin;
+  margin: 0vmin;
 }
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background: rgb(149, 145, 238);
-  
+  width: 100vw;
+  margin: 0vmin;
 }
+/* @media only screen and (max-width: 100vmin) {
+  .App{
+    min-width: 100vmin;
+  }
+  
+} */
+
 .App h1{
   margin: 0vmin;
   
 }
+.NavigationBar{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration:none;
+  background: rgb(187, 130, 142);
+}
+.menuBar{
+  position: relative;
+  display: inline-block;
+}
+.navLink{
+  text-decoration:none;
+  color: black;
+}
+.navLink:hover{
+  color: azure;
+}
+.menuLinks{
+  position: absolute;
+  display: none;
+  background-color: #f9f9f9;
+  z-index: 1;
+  animation: growDown 300ms;
+  padding: 1.5vmin;
+  border-radius: 1vmin;
+}
+.menuNavLink{
+  text-decoration:none;
+  color: black;
+}
 
+@keyframes growDown {
+  0% {transform: rotateY(0.5turn);}
+  100% {transform: rotateY(1)}
+}
+.menuBar:hover .menuLinks{
+  display: flex;
+  flex-direction: column;
+}
+.menuNavLink:hover {
+  color: #6450d7;
+  
+}
+/*  */
+.Pages{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 93vw;
+  align-self: center;
+  background: chocolate;
+  animation: PageFromLeft 400ms;
+
+}
+@keyframes PageFromLeft {
+   0% {
+    
+     transform: translateX(100%);
+    }
+    100% {
+    
+      transform: translateX(0%);
+    }
+} 
+.favorite{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 100vh;
+  width: 90vw;
+  background: rgb(72, 98, 182);
+  animation: PageFromTop 700ms;
+}
+@keyframes PageFromTop {
+   0% {
+     transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+    }
+} 
+.sgnLogForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 85vmin;
+  min-height: 50vmin;
+  max-height: 60vmin;
+  padding: 1vmin;
+}
+.logForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vmin;
+  border: 1px solid black;
+  min-width: 90vmin;
+  
+  min-height: 50vmin;
+ 
+  padding-right: 2vmin;
+  
+}
+
+
+
+.LgnFrmCont{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.formInput{
+  display: flex;
+ 
+  margin-top: 2vmin;
+  max-width: 80vmin;
+}
+.formInput label{
+  margin-right: 2vmin;
+  min-width: 30vmin;
+}
+.formButton{
+  margin-top: 2vmin;
+  display:flex;
+  justify-content: center;
+  width: 50vmin;
+}
