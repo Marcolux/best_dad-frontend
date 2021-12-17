@@ -17,7 +17,7 @@ const Favfacts = ()=>{
             })
         }
         getFavFact()
-    }, [favFact])
+    }, [favFact, id])
 
     // const deleteFavFact=async (x)=>{
     // await axios.delete(`http://localhost:3001/facts/${x}`),

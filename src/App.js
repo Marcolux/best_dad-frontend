@@ -1,7 +1,7 @@
 import './App.css';
 
 import { Route,Routes,Navigate } from 'react-router-dom';
-import { useState, useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import NavigationBar from './components/NavigationBar';
