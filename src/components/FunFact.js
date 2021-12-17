@@ -28,7 +28,7 @@ const Fact = (props)=>{
 
 
     const setFavFact=()=>{
-        axios.post(`http://localhost:3001/facts/${id}`, {fact})
+        axios.post(`https://best-dad-backend.herokuapp.com/facts/${id}`, {fact})
         .then((response)=>{
             console.log(response)
         })

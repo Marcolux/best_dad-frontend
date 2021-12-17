@@ -12,7 +12,7 @@ const Signup = (props)=>{
 
     const submit = (e)=>{
         e.preventDefault()
-        axios.post(`http://localhost:3001/user`,{name,email,password,sign})
+        axios.post(`https://best-dad-backend.herokuapp.com/user`,{name,email,password,sign})
         .then((response)=>{
             console.log(response.data.newUser.id)
             localStorage.setItem('userId', response.data.newUser.id)

@@ -9,7 +9,7 @@ const Favfacts = ()=>{
     
     useEffect(()=>{
         const getFavFact=async ()=>{
-            await axios.get(`http://localhost:3001/facts/${id}`)
+            await axios.get(`https://best-dad-backend.herokuapp.com/facts/${id}`)
             .then((response)=>{
                 setFavFact(response.data)
                 
@@ -40,7 +40,7 @@ const Favfacts = ()=>{
                 <p >{item.content}</p>
                 <button onClick={()=>{
                   
-                        axios.delete(`http://localhost:3001/facts/${item.id}`)
+                        axios.delete(`https://best-dad-backend.herokuapp.com/facts/${item.id}`)
                         // setFavFact([...favFact])
                        
                 }   
