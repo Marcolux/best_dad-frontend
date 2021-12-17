@@ -25,7 +25,7 @@ function App() {
     const userId = localStorage.getItem('userId')
     if (userId) {
     
-    axios.get(`https://best-dad-backend.herokuapp.com/user/verify`, {
+    axios.get(`http://best-dad-backend.herokuapp.com/user/verify`, {
       headers: {
         Authorization: userId
       }
