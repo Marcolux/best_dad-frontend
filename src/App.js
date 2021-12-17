@@ -11,6 +11,7 @@ import UserPage from './pages/UserPage';
 import Favfacts from './pages/FavFacts';
 import FavJokes from './pages/FavJokes';
 import FavQuotes from './pages/FavQuotes';
+import HomePage from './pages/HomePage';
 
 
 
@@ -46,6 +47,7 @@ console.log(user)
     <div className="App">
     <NavigationBar user={user} setUser={setUser}/>
     <Routes>
+    <Route path='/' element ={<HomePage/>}/>
     <Route path='/login' element={user.id ? <Navigate to={`/${user.id}`} element={<UserPage/>}/> : <Login user={user} setUser={setUser}/>}>Login</Route>
     <Route path='/signup' element={ user.id ? <Navigate to={`/${user.id}`} element={<UserPage/>}/>:<Signup user={user} setUser={setUser}/>}>Signup</Route>
     <Route path='/:id' element={
