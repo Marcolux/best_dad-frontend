@@ -74,7 +74,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 91vh;
   width: 93vw;
   align-self: center;
   background: chocolate;
@@ -95,12 +95,12 @@ body{
   display: flex;
   flex-direction: column;
   align-self: center;
-  height: 100vh;
+  height: 91vh;
   width: 90vw;
   background: rgb(72, 98, 182);
-  animation: PageFromTop 700ms;
+  animation: PageFromBottom 700ms;
 }
-@keyframes PageFromTop {
+@keyframes PageFromBottom {
    0% {
      transform: translateY(100%);
   }
@@ -108,6 +108,7 @@ body{
     transform: translateY(0%);
     }
 } 
+
 .sgnLogForm{
   display: flex;
   flex-direction: column;
@@ -119,6 +120,8 @@ body{
   max-height: 60vmin;
   padding: 1vmin;
 }
+
+
 .logForm{
   display: flex;
   flex-direction: column;
@@ -127,11 +130,8 @@ body{
   margin-top: 15vmin;
   border: 1px solid black;
   min-width: 90vmin;
-  
   min-height: 50vmin;
- 
   padding-right: 2vmin;
-  
 }
 
 
@@ -157,4 +157,30 @@ body{
   display:flex;
   justify-content: center;
   width: 50vmin;
+}
+
+
+.userPage{
+  display: flex;
+  flex-direction: column;
+  height: 91vh;
+  width: 93vw;
+  background: rgb(30, 162, 210);
+  animation: PageFromTop 500ms;
+  align-self: center;
+}
+@keyframes PageFromTop {
+   0% {
+    
+     transform:scaleY(0%);
+    }
+    100% {
+    
+      transform: scaleY(100%);
+    }
+} 
+
+.userPageContent{
+  display: flex;
+  justify-content: space-evenly;
 }
