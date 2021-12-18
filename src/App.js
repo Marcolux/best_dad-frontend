@@ -48,8 +48,8 @@ console.log(user)
     <NavigationBar user={user} setUser={setUser}/>
     <Routes>
     <Route path='/' element ={<HomePage user={user} setUser={setUser}/>}/>
-    <Route path='/login' element={user.id ? <Navigate to={`/${user.id}`} element={<UserPage/>}/> : <Login user={user} setUser={setUser}/>}>Login</Route>
-    <Route path='/signup' element={ user.id ? <Navigate to={`/${user.id}`} element={<UserPage/>}/>:<Signup user={user} setUser={setUser}/>}>Signup</Route>
+    <Route path='/Login' element={user.id ? <Navigate to={`/${user.id}`} element={<UserPage/>}/> : <Login user={user} setUser={setUser}/>}>Login</Route>
+    <Route path='/Signup' element={ user.id ? <Navigate to={`/${user.id}`} element={<UserPage/>}/>:<Signup user={user} setUser={setUser}/>}>Signup</Route>
     <Route path='/:id' element={
       user.id ? 
       <UserPage user={user}/>
