@@ -20,13 +20,13 @@ const FavJokes = ()=>{
     useEffect(getFavJokes,[])
 
     return (
-       
+        <div className="favoriteBorder">
         <div className="favorite">
             <h1>Favorite Jokes</h1>
             {favJokes.map((item, i)=>{
                 
                 return(
-                    <div key={i} className="favFact">
+                    <div key={i} className="favs">
                 <p >{item.content}</p>
                 <button onClick={async()=>{
                     await axios.delete(`http://localhost:3001/jokes/${item.id}`)
@@ -37,7 +37,7 @@ const FavJokes = ()=>{
                 </div>
                 )
             })}
-            
+        </div>
         </div>
       
 

@@ -21,12 +21,13 @@ const Favfacts = ()=>{
 
     return (
        
+        <div className="favoriteBorder">
         <div className="favorite">
             <h1>Favorite Facts</h1>
             {favFact.map((item, i)=>{
                 
                 return(
-                    <div key={i} className="favFact">
+                <div key={i} className="favs">
                 <p >{item.content}</p>
                 <button onClick={async()=>{
                     await axios.delete(`http://localhost:3001/facts/${item.id}`)
@@ -38,6 +39,7 @@ const Favfacts = ()=>{
                 )
             })}
             
+        </div>
         </div>
       
 

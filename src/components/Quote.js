@@ -23,11 +23,12 @@ const Quote = ()=>{
 
     return (
         <div className="api">
-            <p>Advice</p>
+            <h4>Advice :</h4>
             <p>{quote}</p>
+            <div className="apiButton">
             <button onClick={getQuote}>get one more</button>
-            <button onClick={ async ()=>{ await axios.post(`http://localhost:3001/quotes/${id}`, {quote})} }>fav</button>
-
+            <button onClick={ async ()=>{ await axios.post(`http://localhost:3001/quotes/${id}`, {quote})} }>Add</button>
+            </div>
         </div>
     
     )

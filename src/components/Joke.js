@@ -42,10 +42,12 @@ const Joke = (props)=>{
 
     return (
         <div className="api">
+            <h4>Joke :</h4>
             <p>{joke}</p>
+            <div className="apiButton">
             <button onClick={getJoke}>get one more</button>
-            <button onClick={ ()=>{axios.post(`http://localhost:3001/jokes/${id}`, {joke})} }>fav</button>
-
+            <button onClick={ ()=>{axios.post(`http://localhost:3001/jokes/${id}`, {joke})} }>Add</button>
+            </div>
         </div>
     )
 }
