@@ -39,7 +39,7 @@ useEffect(setTrue,[])
         {
             props.info === true ?
             
-           <h1 onClick={(e)=>{
+           <h1 className="nameInput" onClick={(e)=>{
             e.preventDefault()  
             setFalse()
             }}>{props.user.name}</h1>
@@ -47,7 +47,7 @@ useEffect(setTrue,[])
         <div>
         <form className='nameInput' onSubmit={updateName}>
             <input 
-            // value={props.user.name} 
+            placeholder={props.user.name} 
             onChange={(e) =>{ 
                 e.preventDefault()  
                 setName(e.target.value)}} ></input>

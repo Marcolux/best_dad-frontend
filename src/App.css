@@ -1,7 +1,8 @@
+
 body{
   display: flex;
-
-  background: rgb(167, 207, 242);
+  
+  /* background: rgb(167, 207, 242); */
   justify-content: center;
   padding: 0vmin;
   margin: 0vmin;
@@ -9,10 +10,13 @@ body{
 .App {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  background: rgb(149, 145, 238);
+  background-image: linear-gradient(to top right, #ffffff 0%, #8c8c86 50%, #151515 100%);
   width: 100vw;
   margin: 0vmin;
+  height: 100vh;
+  opacity: 1;
 }
 /* @media only screen and (max-width: 100vmin) {
   .App{
@@ -30,36 +34,60 @@ body{
   justify-content: space-evenly;
   align-items: center;
   text-decoration:none;
-  background: rgb(187, 130, 142);
+ border-bottom: 1px solid white;
+ box-shadow: -.07vmin -.12vmin .4vmin .4vmin #ffffff9a;
+ margin: 0.2vmin;
+ background-image: linear-gradient(to top right, #ffffff 0%, #8c8c86 50%, #151515 100%);
+ color: rgb(0, 0, 0);
+ text-shadow:1px 1px #ffffff;
+  height:5vmin;
+  width: 97vw;
+  padding: 1vmin;
+  font-size: 4vmin;
+  font-family: 'Shizuru', cursive;
+  font-weight: 700;
+  /* color: #f9f9f9; */
 }
 .menuBar{
   position: relative;
   display: inline-block;
 }
+.menuBar p:hover{
+  color: rgb(255, 255, 255);
+  text-shadow:1px 1px #e39038;
+  cursor:pointer;
+
+}
 .navLink{
   text-decoration:none;
-  color: black;
+  color: rgb(0, 0, 0);
+  text-shadow:1px 1px #ffffff;
 }
 .navLink:hover{
-  color: azure;
+  color: rgb(255, 255, 255);
+  text-shadow:1px 1px #e39038;
 }
 .menuLinks{
   position: absolute;
   display: none;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9cb;
   z-index: 1;
   animation: growDown 300ms;
   padding: 1.5vmin;
   border-radius: 1vmin;
+  border: 3px solid black;
+  
 }
 .menuNavLink{
   text-decoration:none;
+  font-family:"Chalkduster";
   color: black;
 }
 
 @keyframes growDown {
-  0% {transform: rotateY(0.5turn);}
-  100% {transform: rotateY(1)}
+  0% {transform: rotateY(0.2turn);}
+ 
+  100% {transform: rotateY(1turn)}
 }
 .menuBar:hover .menuLinks{
   display: flex;
@@ -69,18 +97,69 @@ body{
   color: #6450d7;
   
 }
+.logout:hover{
+  color: rgb(255, 255, 255);
+  text-shadow:1px 1px #e39038;
+  cursor: pointer;
+}
+.homePage{
+  display: flex;
+  flex-direction: column;
+  background: url('./images/sfondo-nero-lavagna.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(230, 226, 226);
+  opacity: .9;
+  align-items: center;
+  height: 80vh;
+  width: 90vw;
+  justify-self: center;
+  font-family:"Chalkduster";
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5vmin;
+  /* border:1px solid rgb(223, 152, 98); */
+  margin:1.5vmin;
+  box-shadow: -.07vmin -.12vmin .9vmin .9vmin #f9b66f9a;
+}
+.homePageBorder{
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+  border-radius: 2vmin;
+/* padding:1vmin; */
+/* border: 1px solid rgb(154, 75, 27); */
+/* background: black; */
+background-image: linear-gradient(to bottom left, #e39038 0%, #e6e6c6 50%, #a95904 100%);
+/* background:linear-gradient(top right, #0b0a0a 0%, #AACFEF 100%); */
+}
+@font-face {
+  font-family:"Chalkduster";
+  src: url("./font-family/Chalkduster400.ttf") format("truetype");
+}
+.homeDescription{
+  max-width: 60vw;
+  text-align: left;
+}
 /*  */
 .Pages{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 91vh;
-  width: 93vw;
+
+  font-family:"Chalkduster";
+  height: 70vh;
+  width: 70vw;
   align-self: center;
-  background: chocolate;
-  animation: PageFromLeft 400ms;
+  border: 1px solid #151515;
+  animation: PageFromLeft 500ms;
+  margin:2vmin;
+  background-image: linear-gradient(to bottom left,#434242d9 0%, #fcfbfa 30%, #bdbdbd 70%, #262626 100%);
+  border-radius: 1vmin;
+  padding: 1.5vmin;
+  box-shadow: -.07vmin -.12vmin .9vmin .9vmin #7b4000b6;
 
 }
+
 @keyframes PageFromLeft {
    0% {
     
@@ -115,14 +194,34 @@ body{
   align-items: center;
   justify-content: center;
   border: 1px solid black;
+  color: white;
   width: 85vmin;
   min-height: 50vmin;
   max-height: 60vmin;
   padding: 1vmin;
+  /* background-image:linear-gradient(to bottom left, #e39038 0%, #e6e6c6 50%, #a95904 100%); */
+  background: url('./images/sfondo-nero-lavagna.jpeg');
+  background-position: center;
+  background-size: cover;
+  max-width: 60vw;
+  margin-top: 2vmin;
+  border-radius: 1vmin;
+  opacity: 1;
+  box-shadow: -.07vmin -.12vmin 1vmin 1vmin #0000009a;
 }
 
+.logFormBorder{
+  border:1px solid #151515;
+  background-image:linear-gradient(to bottom left, #e39038 0%, #e6e6c6 50%, #a95904 100%);
+  border-radius: 2vmin;
+  margin-top: 6vh;
+  margin-bottom: 2vh;
+  opacity: 10;
 
-.logForm{
+
+}
+
+/* .logForm{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,7 +231,7 @@ body{
   min-width: 90vmin;
   min-height: 50vmin;
   padding-right: 2vmin;
-}
+} */
 
 
 
@@ -140,6 +239,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
 }
 
 .formInput{
@@ -157,6 +257,14 @@ body{
   display:flex;
   justify-content: center;
   width: 50vmin;
+  background: rgba(255, 255, 255, 0.899);
+  color: rgb(0, 0, 0);
+}
+.formButton:hover{
+  cursor: pointer;
+}
+.formButtonLgn{
+  border: none;
 }
 
 
@@ -167,12 +275,28 @@ body{
   overflow:scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  padding: 2vmin;
-  height: 85vh;
+  padding:1vmin;
+  height: 95vh;
   width: 93vw;
-  background: rgb(30, 162, 210);
-  animation: PageFromTop 650ms;
+  /* background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%); */
+  animation: PageFromTop 850ms;
   align-self: center;
+  background:white;
+  background-image:linear-gradient(to bottom left, #ffe4a0 0%, #ffcd60 50%, #ffffff 100%);
+  margin-top: 3vmin;
+  margin-bottom: 3vmin;
+  border: 2px solid black;
+  border-radius: 1vmin;
+ 
+}
+.Title{
+  font-family: 'Shizuru', cursive;
+
+}
+.Title:hover{
+  color: rgb(255, 255, 255);
+  text-shadow:1px 1px #e39038;
+  cursor: pointer;
 }
 .userPage::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
@@ -182,50 +306,108 @@ body{
     
      transform:scaleY(0%);
     }
-    100% {
+    50%{
+      transform:scaleY(170%)
+    }
+    70% {
     
-      transform: scaleY(100%);
+      transform: scaleY(80%);
+    }
+    85%{
+    transform: scaleY(120%);
+    }
+    100%{
+    transform: scaleY(100%);
     }
 } 
 
 .userPageContent{
-  background: bisque;
-  padding: 1vmin;
+  height:68vh;
+  width: 90vw;
+  overflow: scroll;
+  background-image: linear-gradient(to top right, #e39038 0%, #63401b 50%, #a95904 100%);
+ border:2px solid #151515;
   margin: 0vmin;
   display: flex;
   justify-content:space-between;
+  border-radius: 1vmin;
+  padding: 1.5vmin
 }
 
 .apiCalls{
+  margin-left: 2vw;
+  border-radius: .5vmin;
   display: flex;
+  
   flex-direction: column;
   justify-content: space-evenly;
   background: #f9f9f9;
-  padding: 1vmin;
+  padding: 2vmin;
   width: 43vw;
-  height: 80vh;
+  height: 63vh;
   overflow: scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
+  background-image: linear-gradient(to bottom left,#434242d9 0%, #fcfbfa 30%, #bdbdbd 70%, #262626 100%);
+  box-shadow: -.07vmin -.12vmin .9vmin .9vmin #0000009a;
 }
 .apiCalls::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 .api{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
   text-align: left;
-  font-size: 2.3vh;
+  font-size: 2vmin;
   padding: 1vmin;
   border: 1px solid black;
+  box-shadow: -.07vmin -.12vmin .6vmin .6vmin #0000009a;
+  background: white;
+  height: 15vh;
+  overflow: scroll;
 }
 .horoscope{
+  border: 1px solid black;
+  border-radius: 1vmin;
   width: 43vw;
-  height: 80vh;
+  height: 65vh;
   overflow:scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
+  box-shadow: -.07vmin -.12vmin .9vmin .9vmin #0000009a;
+  background: white;
+  font-family: 'Architects Daughter', cursive;
+  padding: 1vmin;
+  opacity: 1;
 }
+.signIn{
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+}
+.signInput{
+  display: flex;
+  justify-content:center
+
+}
+.signInput button{
+width: 4vmin;
+height: 4vmin;
+border-radius:2vmin ;
+}
+.signInput button:hover{
+  background: rgb(255, 204, 0);
+  cursor: pointer;
+}
+
 .horoscope::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
+}
+.description{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.date{
+  font-family: 'Ole', cursive;
+  letter-spacing: .1vmin;
 }
 
 .nameInput{
@@ -234,28 +416,34 @@ body{
   text-align: center;
   background: none;
   border: none;
-  font-size: 8vmin;
+  font-size: 7vmin;
+  padding: 1vmin;
+  margin-top:0vmin;
+  font-family: 'Shizuru', cursive;
 }
 .nameInput input{
   border: none;
+  padding: 1vmin;
   width: 25vw;
-  height: 7vh;
+  height: 8vh;
   background: rgba(255, 255, 255, 0.461);;
   border-radius: 8vmin;
   text-align: center;
   transition: ease-in-out, width .50s ease-in-out; 
   font-size: 8vmin;
+  font-family: 'Shizuru', cursive;
   /* transition: ease-in-out, height .50s ease-in-out; */
 }
 
 .nameInput input:focus{
   outline:none;
   width: 30vw;
-  height: 7vh;
+  height: 9vh;
   text-align: center;
   background: rgba(255, 255, 255, 0.372);
   border-radius: 5vmin;
   font-size: 8vmin;
+  font-family: 'Shizuru', cursive;
   /* animation: rotation 650ms ; */
 }
 
@@ -268,12 +456,12 @@ body{
   .spin::before {
     animation: .4s linear infinite spinner;
     animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: #1c87c9;
+    border: solid 5px #fdfeffee;
+    border-bottom-color: #0000009c;
     border-radius: 50%;
     content: "";
-    height: 30vh;
-    width: 30vw;
+    height: 50px;
+    width: 50px;
     position: fixed;
     top: 50vh;
     left: 50vw;

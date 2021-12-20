@@ -22,9 +22,10 @@ const Login = (props)=>{
 }
 
     return(
+        <div className="logFormBorder">
         <div className="Pages">
         <h1>Login</h1>
-        <div className="logForm">
+        <div className="sgnLogForm">
             <form className="LgnFrmCont"
              onSubmit={loginForm}
              >
@@ -43,9 +44,10 @@ const Login = (props)=>{
                     />
                 </div>
                 <div className='formButton'>
-                    <input  type="submit" value="Log In" />
+                    <input className="formButtonLgn"  type="submit" value="Log In" />
                 </div>
             </form>
+        </div>
         </div>
     </div>
     )

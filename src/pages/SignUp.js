@@ -26,6 +26,7 @@ const Signup = (props)=>{
 
 
     return(
+    <div className="logFormBorder">
     <div className="Pages">
         <h2>Signup</h2>
         <div className="sgnLogForm">
@@ -57,13 +58,14 @@ const Signup = (props)=>{
                 value={sign} onChange={(e) => setSign(e.target.value)} 
                 />
                 </div>
-                <div className='formInput'>
-                    <input className='formButton' type="submit" value="Submit" />
+                <div className='formButton'>
+                    <input className='formButtonLgn' type="submit" value="Signup" />
                 </div>
             </form>
         
         
         </div>
+    </div>
     </div>
     )
 }

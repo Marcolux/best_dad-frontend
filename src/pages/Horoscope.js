@@ -13,7 +13,7 @@ const Horoscope = (props)=>{
     // const[file, setFile] = useState()
     // const[fd, setTd] = useState(file)
 
-    const {id} = useParams()
+    // const {id} = useParams()
 
     const getHoroscope = ()=>{
         axios.post(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`)
@@ -29,18 +29,18 @@ const Horoscope = (props)=>{
 
     return (
         <div className="horoscope">
-            <h1>{horoscope.current_date}</h1>
-            <h2>{sign}</h2>
+            <h2 className="date">{horoscope.current_date}</h2>
+            <h2 className="sign">{sign}</h2>
             <h3>{horoscope.date_range}</h3>
-            <p>{horoscope.description}</p>
-            <p>Mood:{horoscope.mood}</p>
+            <p className="description">{horoscope.description}</p>
+            <p>Mood: {horoscope.mood}</p>
 
             <div className='signInput'>
-                    <label htmlFor="name">sign:</label>
-                    <input 
+                    <label htmlFor="name">sign :  </label>
+                    <input className="signIn"
                 value={sign} onChange={(e) =>setSign(e.target.value)}
                     />
-                <button onClick={getHoroscope}>horoscope</button>
+                <button onClick={getHoroscope}></button>
             </div>
         
         </div>

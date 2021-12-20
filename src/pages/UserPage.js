@@ -18,10 +18,12 @@ const[info,setInfo] =useState(false)
         
          
         <div className="userPage">
+            <div className="Title">
             <UpdateInfo user={user} setUser={setUser} info={info} setInfo={setInfo}/>
+            </div>
             <div className="userPageContent">
-                <div className="horoscope">
-                    <p>Horoscope</p>
+                <div >
+                   
                     <Horoscope user={user} setUser={setUser}/>
                 </div>
                 <div className="apiCalls">

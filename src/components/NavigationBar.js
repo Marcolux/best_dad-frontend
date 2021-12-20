@@ -24,7 +24,7 @@ const NavigationBar = (props)=>{
                 <>
                
                 <div className="menuBar">
-                <p>user menu</p>
+                <p>{`${props.user.name}'s favorite...`}</p>
                 <div className="menuLinks">
                 {/* <p onClick={sendToFact}>factS</p> */}
                     <Link className ="menuNavLink" to={`/${props.user.id}/facts`}>factS</Link>
@@ -32,7 +32,7 @@ const NavigationBar = (props)=>{
                     <Link className ="menuNavLink" to={`/${props.user.id}/quotes`}>qoutes</Link>
                 </div>
             </div>
-                <Link className ="navLink" to={`/${props.user.id}`} >User page</Link>
+                <Link className ="navLink" to={`/${props.user.id}`} >Random</Link>
             <p className="logout" onClick={()=>{
             localStorage.removeItem('userId')
             props.setUser({})
