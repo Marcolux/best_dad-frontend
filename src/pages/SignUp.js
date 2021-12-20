@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
+import { useEffect } from "react/cjs/react.development"
 
 
 
@@ -10,13 +11,14 @@ const Signup = (props)=>{
     const [password, setPassword] = useState('')
     const [sign, setSign]  = useState('')
 
-    const submit = (e)=>{
+    const submit = async (e)=>{
         e.preventDefault()
-        axios.post(`https://best-dad-backend.herokuapp.com/user`,{name,email,password,sign})
+        // axios.post(`https://best-dad-backend.herokuapp.com/user`,{name,email,password,sign})
+        await axios.post(`http://localhost:3001/user`,{name,email,password,sign})
         .then((response)=>{
-            // console.log(response)
-            localStorage.setItem('userId', response.data.newUser.id)
-            props.setUser(response.data.newUser.id)
+             console.log(response.data.user.id)
+             localStorage.setItem('userId', response.data.user.id)
+             props.setUser(response.data.user)
         })
 
     }

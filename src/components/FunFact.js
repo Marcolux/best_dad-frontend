@@ -10,11 +10,6 @@ const Fact = (props)=>{
 
     const {id} = useParams()
 
-    console.log(id)
-
-   
-
-    
     const getFact = ()=>{
         axios.get('https://uselessfacts.jsph.pl//random.json?language=en')
         .then((response)=>{
@@ -27,19 +22,11 @@ const Fact = (props)=>{
       },[])
 
 
-    const setFavFact=()=>{
-        axios.post(`https://best-dad-backend.herokuapp.com/facts/${id}`, {fact})
-        .then((response)=>{
-            console.log(response)
-        })
-    }
-
-
     return (
         <div className="api">
             <p>{fact}</p>
             <button onClick={getFact}>get one more</button>
-            <button onClick={setFavFact}>fav</button>
+            <button onClick={ ()=>{axios.post(`http://localhost:3001/facts/${id}`, {fact})} }>fav</button>
 
         </div>
     )

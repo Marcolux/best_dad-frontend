@@ -6,54 +6,41 @@ import { useState, useEffect } from 'react'
 const Favfacts = ()=>{
     const [favFact, setFavFact] = useState([])
     const {id} = useParams()
+   
     
-    useEffect(()=>{
-        const getFavFact=async ()=>{
-            await axios.get(`https://best-dad-backend.herokuapp.com/facts/${id}`)
-            .then((response)=>{
-                setFavFact(response.data)
-                
-                
-            })
-        }
-        getFavFact()
-    }, [favFact, id])
+    const getFavFact= async ()=>{
+        //  axios.get(`https://best-dad-backend.herokuapp.com/facts/${id}`)
+        await axios.get(`http://localhost:3001/facts/${id}`)
+        .then((response)=>{
+            setFavFact(response.data)    
+        })
+    
+    }
 
-    // const deleteFavFact=async (x)=>{
-    // await axios.delete(`http://localhost:3001/facts/${x}`),
-    // setFavFact([...favFact]),
-    // console.log(favFact)
-        
-    // }
-    console.log(favFact)
+    useEffect(getFavFact,[])
 
-    
-    
-    
     return (
+       
         <div className="favorite">
             <h1>Favorite Facts</h1>
             {favFact.map((item, i)=>{
                 
                 return(
-                <div key={i} className="favFact">
+                    <div key={i} className="favFact">
                 <p >{item.content}</p>
-                <button onClick={()=>{
-                  
-                        axios.delete(`https://best-dad-backend.herokuapp.com/facts/${item.id}`)
-                        // setFavFact([...favFact])
-                       
-                }   
-        
-    
-                
-                
+                <button onClick={async()=>{
+                    await axios.delete(`http://localhost:3001/facts/${item.id}`)
+                    // axios.delete(`https://best-dad-backend.herokuapp.com/facts/${item.id}`)
+                    getFavFact()
+                } 
                 }>remove</button>
                 </div>
                 )
             })}
             
         </div>
+      
+
     )
 }
 export default Favfacts
